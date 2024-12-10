@@ -1,0 +1,1 @@
+fn main() {    let mut v = vec![1, 2, 3];    let ptr = v.as_mut_ptr();    unsafe {        let _x = *ptr; // This line is okay, it reads from valid memory    }    v.push(4); // This is where the problem arises}
